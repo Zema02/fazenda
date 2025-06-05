@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.fazenda {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+.ceu {
+    height: 60%;
+    background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+    position: relative;
+}
+
+.sol {
+    width: 80px;
+    height: 80px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    box-shadow: 0 0 40px #FFD700;
+}
+
+.nuvem {
+    position: absolute;
+    background-color: white;
+    border-radius: 50px;
+    width: 100px;
+    height: 40px;
+}
+
+.nuvem1 {
+    top: 80px;
+    left: 100px;
+}
+
+.nuvem2 {
+    top: 120px;
+    left: 300px;
+}
+
+.campo {
+    height: 40%;
+    background: linear-gradient(to bottom, #90EE90, #228B22);
+    position: relative;
+}
+
+.casa {
+    width: 150px;
+    height: 120px;
+    background-color: #8B4513;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.casa::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 40px solid #A52A2A;
+}
+
+.arvore {
+    width: 40px;
+    height: 100px;
+    background-color: #8B4513;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}
+
+.arvore::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: #228B22;
+    border-radius: 50%;
+}
+
+.animal {
+    position: absolute;
+    bottom: 60px;
+}
+
+.vaca {
+    width: 100px;
+    height: 100px;
+    background-image: url('assets/vaca1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moverVaca 4s infinite alternate ease-in-out;
+}
+
+@keyframes moverVaca {
+    0% {
+        left: 30%;
+    }
+    100% {
+        left: 70%;
+    }
+}
+
+.galinha {
+    width: 30px;
+    height: 30px;
+    background-color: #FFD700;
+    left: 350px;
+    border-radius: 50%;
+}
+
+.porco {
+    width: 50px;
+    height: 35px;
+    background-color: #FFB6C1;
+    left: 450px;
+    border-radius: 25px;
+} 
